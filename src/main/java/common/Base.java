@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
 
@@ -29,7 +30,9 @@ public class Base {
 			webdriver = new ChromeDriver();
 			break;
 		case "firefox":
-			// fill data
+			System.setProperty("webdriver.gecko.driver",
+					"C:\\Users\\ssubra368\\Documents\\Personal\\Courses\\Downloaded_jars\\geckodriver.exe");
+			webdriver = new FirefoxDriver();
 			break;
 		case "ie":
 			// fill data
