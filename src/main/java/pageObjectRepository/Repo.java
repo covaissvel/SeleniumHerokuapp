@@ -14,11 +14,11 @@ public class Repo {
 		this.driver = driver;
 	}
 	
-	By checkBoxes = By.id("checkboxes");
+	//checkboxes by list
+	By checkBoxesByList = By.xpath("//*[@id='checkboxes']/input");
 
 	public List<WebElement> checkBoxes() {
-		return driver.findElements(checkBoxes);
+		return driver.findElements(checkBoxesByList);
 	}
 	
-
 }

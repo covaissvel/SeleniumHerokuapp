@@ -23,12 +23,11 @@ public class RepoTest extends Base{
 		 List<WebElement> checkboxes = repo.checkBoxes();
 		 
 		 //for selecting the first check box
-		 checkboxes.get(0).click();		 
-		 
+		 checkboxes.get(0).click();	
+
 		 //assert if check box is selected
-		 assertTrue(checkboxes.get(0).isSelected());		 
-		 
-		 
+		 assertTrue(checkboxes.get(0).isSelected());
+	
 	}
 	
 

@@ -26,12 +26,12 @@ public class Base {
 		switch (browser) {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver",
-					"/SeleniumHerokuapp/src/main/resources/browserDrivers/chromedriver.exe");
+					"src/main/resources/browserDrivers/chromedriver.exe");
 			webdriver = new ChromeDriver();
 			break;
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\Users\\ssubra368\\Documents\\Personal\\Courses\\Downloaded_jars\\geckodriver.exe");
+					"src/main/resources/browserDrivers/geckodriver.exe");
 			webdriver = new FirefoxDriver();
 			break;
 		case "ie":
