@@ -7,28 +7,79 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import common.Base;
 import pageObjectRepository.Repo;
 
 public class RepoTest extends Base{
 	
-	//selection of check boxes
-	@Test
-	public void testCheckBox() {
+	SoftAssert softAssert = new SoftAssert();
+	Repo repo;
+	
+	@BeforeClass
+	public void startup() {
 		webdriver = initialize();
+		repo = new Repo(webdriver);
+	}
+	
+	@Test
+	public void testHerokaupp() {
+		
+		//testCheckBox
+		testCheckBox();
+		
+		//dropdown
+		testDropDown();
+		
+		
+		
+	}
+	
+	//selection of check boxes
+	public void testCheckBox() {
+
 		webdriver.get("http://the-internet.herokuapp.com/checkboxes");
-		 Repo repo = new Repo(webdriver);
+
 		 List<WebElement> checkboxes = repo.checkBoxes();
 		 
 		 //for selecting the first check box
 		 checkboxes.get(0).click();	
 
 		 //assert if check box is selected
-		 assertTrue(checkboxes.get(0).isSelected());
-	
+		 softAssert.assertTrue(checkboxes.get(0).isSelected());
 	}
+	
+	//test drop down
+	public void testDropDown() {
+		webdriver.get("http://the-internet.herokuapp.com/dropdown");
+		
+		Select select = new Select(repo.dropdown());
+		
+		//selecting a specific value
+		select.selectByValue("1");
+		
+		//asserting
+		softAssert.assertTrue(repo.dropdown().getText().equalsIgnoreCase("Option 1"));
+	}
+	
+	//basic auth
+	public void basicAuth() {
+		webdriver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+	}
+	
+	@AfterClass
+	public void teardown(){
+		webdriver.quit();
+	}
+	
+	
 	
 
 }

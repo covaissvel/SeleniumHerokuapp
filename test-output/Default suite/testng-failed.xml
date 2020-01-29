@@ -5,7 +5,10 @@
     <classes>
       <class name="pageObjectModelTest.RepoTest">
         <methods>
-          <include name="testCheckBox"/>
+          <include name="testHerokaupp"/>
+          <include name="startup"/>
+          <include name="testDropDown"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- pageObjectModelTest.RepoTest -->
     </classes>

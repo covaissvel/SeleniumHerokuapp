@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 public class Repo {
 	
 	WebDriver driver;
+	Repo repo;
 	
 	public Repo(WebDriver driver) {
 		this.driver = driver;
@@ -19,6 +20,13 @@ public class Repo {
 
 	public List<WebElement> checkBoxes() {
 		return driver.findElements(checkBoxesByList);
+	}
+	
+	//dropdown
+	By dropdownById = By.id("dropdown");
+	
+	public WebElement dropdown() {
+		return driver.findElement(dropdownById);
 	}
 	
 }

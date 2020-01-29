@@ -2,15 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6613" started-at="2020-01-28T04:26:49Z" finished-at="2020-01-28T04:26:56Z">
+  <suite name="Default suite" duration-ms="8782" started-at="2020-01-29T03:20:45Z" finished-at="2020-01-29T03:20:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6613" started-at="2020-01-28T04:26:49Z" finished-at="2020-01-28T04:26:56Z">
+    <test name="Default test" duration-ms="8782" started-at="2020-01-29T03:20:45Z" finished-at="2020-01-29T03:20:54Z">
       <class name="pageObjectModelTest.RepoTest">
-        <test-method status="PASS" signature="testCheckBox()[pri:0, instance:pageObjectModelTest.RepoTest@91161c7]" name="testCheckBox" duration-ms="6569" started-at="2020-01-28T04:26:49Z" finished-at="2020-01-28T04:26:56Z">
+        <test-method status="PASS" signature="startup()[pri:0, instance:pageObjectModelTest.RepoTest@204f30ec]" name="startup" is-config="true" duration-ms="6739" started-at="2020-01-29T03:20:45Z" finished-at="2020-01-29T03:20:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCheckBox -->
+        </test-method> <!-- startup -->
+        <test-method status="PASS" signature="testHerokaupp()[pri:0, instance:pageObjectModelTest.RepoTest@204f30ec]" name="testHerokaupp" duration-ms="1298" started-at="2020-01-29T03:20:52Z" finished-at="2020-01-29T03:20:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHerokaupp -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:pageObjectModelTest.RepoTest@204f30ec]" name="teardown" is-config="true" duration-ms="721" started-at="2020-01-29T03:20:53Z" finished-at="2020-01-29T03:20:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- pageObjectModelTest.RepoTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
