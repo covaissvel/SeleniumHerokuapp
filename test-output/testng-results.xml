@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8782" started-at="2020-01-29T03:20:45Z" finished-at="2020-01-29T03:20:54Z">
+  <suite name="Default suite" duration-ms="10590" started-at="2020-01-29T21:27:58Z" finished-at="2020-01-29T21:28:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8782" started-at="2020-01-29T03:20:45Z" finished-at="2020-01-29T03:20:54Z">
+    <test name="Default test" duration-ms="10590" started-at="2020-01-29T21:27:58Z" finished-at="2020-01-29T21:28:08Z">
       <class name="pageObjectModelTest.RepoTest">
-        <test-method status="PASS" signature="startup()[pri:0, instance:pageObjectModelTest.RepoTest@204f30ec]" name="startup" is-config="true" duration-ms="6739" started-at="2020-01-29T03:20:45Z" finished-at="2020-01-29T03:20:52Z">
+        <test-method status="PASS" signature="startup()[pri:0, instance:pageObjectModelTest.RepoTest@4667ae56]" name="startup" is-config="true" duration-ms="6671" started-at="2020-01-29T21:27:58Z" finished-at="2020-01-29T21:28:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="PASS" signature="testHerokaupp()[pri:0, instance:pageObjectModelTest.RepoTest@204f30ec]" name="testHerokaupp" duration-ms="1298" started-at="2020-01-29T03:20:52Z" finished-at="2020-01-29T03:20:53Z">
+        <test-method status="PASS" signature="testHerokaupp()[pri:0, instance:pageObjectModelTest.RepoTest@4667ae56]" name="testHerokaupp" duration-ms="3099" started-at="2020-01-29T21:28:05Z" finished-at="2020-01-29T21:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHerokaupp -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:pageObjectModelTest.RepoTest@204f30ec]" name="teardown" is-config="true" duration-ms="721" started-at="2020-01-29T03:20:53Z" finished-at="2020-01-29T03:20:54Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:pageObjectModelTest.RepoTest@4667ae56]" name="teardown" is-config="true" duration-ms="797" started-at="2020-01-29T21:28:08Z" finished-at="2020-01-29T21:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

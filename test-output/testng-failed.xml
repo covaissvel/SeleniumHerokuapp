@@ -7,7 +7,6 @@
         <methods>
           <include name="testHerokaupp"/>
           <include name="startup"/>
-          <include name="testDropDown"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- pageObjectModelTest.RepoTest -->

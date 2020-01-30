@@ -26,7 +26,7 @@ public class RepoTest extends Base{
 	@BeforeClass
 	public void startup() {
 		webdriver = initialize();
-		repo = new Repo(webdriver);
+		repo = new Repo(webdriver, wait);
 	}
 	
 	@Test
@@ -38,7 +38,11 @@ public class RepoTest extends Base{
 		//dropdown
 		testDropDown();
 		
+		//basicAuth
+		basicAuth();
 		
+		//modalwindow
+		testModalWindow();
 		
 	}
 	
@@ -74,12 +78,27 @@ public class RepoTest extends Base{
 		webdriver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
 	}
 	
+	//modal window
+	public void testModalWindow() {
+		webdriver.get("https://the-internet.herokuapp.com/entry_ad");
+		
+		//check whether modal window is displayed
+		if(repo.isModalWindowDisplayed()) {
+			
+			repo.modalWindowClose();
+			
+		}else {
+			//restart ad
+			repo.clickRestartAd();
+			
+			repo.modalWindowClose();
+		}
+	}
+	
 	@AfterClass
 	public void teardown(){
 		webdriver.quit();
 	}
-	
-	
-	
+
 
 }
