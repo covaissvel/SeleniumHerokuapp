@@ -4,9 +4,11 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -78,6 +80,9 @@ public class RepoTest extends Base{
 		webdriver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
 	}
 	
+	
+	
+	
 	//modal window
 	public void testModalWindow() {
 		webdriver.get("https://the-internet.herokuapp.com/entry_ad");
@@ -93,6 +98,17 @@ public class RepoTest extends Base{
 			
 			repo.modalWindowClose();
 		}
+	}
+	
+	//frame 
+	public void testFrame() {
+		webdriver.get("https://the-internet.herokuapp.com/iframe");
+		
+		//switch to frame
+//		repo.switchToIFrame();
+		
+		
+		
 	}
 	
 	@AfterClass

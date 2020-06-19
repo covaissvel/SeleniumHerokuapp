@@ -8,9 +8,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Repo  {
+public class Repo {
 	WebDriver driver;
 	WebDriverWait wait;
+
+	// common methods
+	public boolean isElementPresent(By byElement) {
+		try {
+
+			if (driver.findElements(byElement).size() > 0) {
+				return true;
+			} else {
+				return false;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 
 	public Repo(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
@@ -49,11 +65,34 @@ public class Repo  {
 			return false;
 		}
 	}
-	
+
 	By restartAd = By.cssSelector("a#restart-ad");
-	
+
 	public void clickRestartAd() {
 		driver.findElement(restartAd).click();
+	}
+
+	// By iFrame
+	By iFrameId = By.id("mce_0_ifr");
+
+//	public WebElement getIFrame() {
+//		
+//		try {
+//			if(isElementPresent(iFrameId)) {
+//				driver.switchTo().frame(driver.findElement(iFrameId));
+//			}
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//	}
+//	
+	public void switchToDefault() {
+		try {
+			driver.switchTo().defaultContent();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
